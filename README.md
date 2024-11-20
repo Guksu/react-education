@@ -6,7 +6,7 @@
 
 1. Props & State
 2. useState & useEffect
-3. 배열 랜더링
+3. Rendering
 4. useRef
 5. Recoil
 6. tanstack/react-query
