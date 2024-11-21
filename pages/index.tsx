@@ -1,4 +1,4 @@
-import { curriculums } from "@/constants";
+import { CURRICULMS } from "@/constants";
 import { useRouter } from "next/router";
 
 // React는 가상 DOM을 사용하여 UI 업데이트를 실행
@@ -21,7 +21,7 @@ export default function Home() {
         alignItems: "center",
       }}
     >
-      {curriculums.map((curriculum) => {
+      {CURRICULMS.map((curriculum) => {
         return (
           <li
             key={curriculum.chapter}

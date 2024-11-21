@@ -1,9 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
+// 서버 상태를 관리하기 위해서 React-query를 사용
+
 export default function Chapter6() {
   const [userIdx, setUserIdx] = useState(0);
-  const GET_USER = "/api/getUser";
+  const GET_USER = "/api/getUserInfo";
 
   const { data, isError, isLoading, error } = useQuery({
     queryKey: [`queryKey_${userIdx}`],

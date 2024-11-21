@@ -1,4 +1,4 @@
-export const curriculums = [
+export const CURRICULMS = [
   {
     chapter: 1,
     title: "Props & State",
@@ -30,5 +30,23 @@ export const curriculums = [
   {
     chapter: 8,
     title: "Next.js API routes",
+  },
+];
+
+export const USER_DATA = [
+  {
+    idx: 0,
+    name: "FIRST_USER",
+    age: 20,
+  },
+  {
+    idx: 1,
+    name: "SECOND_USER",
+    age: 25,
+  },
+  {
+    idx: 2,
+    name: "THIRD_USER",
+    age: 30,
   },
 ];
