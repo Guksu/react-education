@@ -1,6 +1,6 @@
 # React-Education
 
-신입 개발자를 위한 React 간략 정리
+신입 개발자 실무를 위한 React 간략 정리
 
 ## Curriculum
 

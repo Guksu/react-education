@@ -18,9 +18,9 @@ export default function Chapter6() {
 
       return response.data;
     },
-    // 가져온 데이터가 유효한 시간(해당 시간동안은 데이터를 패칭하지 않음
+    // 가져온 데이터가 유효한 시간, 해당 시간동안은 데이터를 호출하지 않음
     staleTime: Infinity,
-    // 가져온 데이터의 캐싱시간 , staleTime이 만료되고 새로 데이터를 가져올 떄 gcTime이 유효한 데이터를 보여준다.
+    // 가져온 데이터의 캐싱시간, staleTime이 만료되고 새로 데이터를 가져올 떄 gcTime이 유효한 데이터를 보여준다.
     gcTime: Infinity,
     // false값이면 API호출하지 않는다
     enabled: userIdx >= 0,
