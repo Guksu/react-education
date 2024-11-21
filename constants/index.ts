@@ -9,26 +9,22 @@ export const curriculums = [
   },
   {
     chapter: 3,
-    title: "Rendering",
-  },
-  {
-    chapter: 4,
     title: "useRef",
   },
   {
-    chapter: 5,
+    chapter: 4,
     title: "Recoil",
   },
   {
-    chapter: 6,
+    chapter: 5,
     title: "tanstack/react-query",
   },
   {
-    chapter: 7,
+    chapter: 6,
     title: "Next.js",
   },
   {
-    chapter: 8,
+    chapter: 7,
     title: "Next.js API routes",
   },
 ];

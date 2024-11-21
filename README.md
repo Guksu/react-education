@@ -6,9 +6,8 @@
 
 1. Props & State
 2. useState & useEffect
-3. Rendering
-4. useRef
-5. Recoil
-6. tanstack/react-query
-7. Next.js
-8. Next.js API routes
+3. useRef
+4. Recoil
+5. tanstack/react-query
+6. Next.js
+7. Next.js API routes

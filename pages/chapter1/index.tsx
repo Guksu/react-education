@@ -44,6 +44,7 @@ interface Props {
   stateNum: number;
   letNum: number;
 }
+
 const Child = ({ stateNum, letNum }: Props) => {
   return (
     <>
