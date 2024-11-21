@@ -13,18 +13,22 @@ export const curriculums = [
   },
   {
     chapter: 4,
-    title: "Recoil",
+    title: "Context API",
   },
   {
     chapter: 5,
-    title: "tanstack/react-query",
+    title: "Recoil",
   },
   {
     chapter: 6,
-    title: "Next.js",
+    title: "tanstack/react-query",
   },
   {
     chapter: 7,
+    title: "Next.js",
+  },
+  {
+    chapter: 8,
     title: "Next.js API routes",
   },
 ];
