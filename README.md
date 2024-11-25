@@ -1,6 +1,6 @@
 # React-Education
 
-신입 개발자 실무를 위한 React 간략 정리
+사내 신입 개발자 실무를 위한 React 간략 정리
 
 ## Curriculum
 
@@ -11,4 +11,4 @@
 5. Recoil
 6. tanstack/react-query
 7. Next.js
-8. Next.js API routes
+8. Hydration

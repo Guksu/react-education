@@ -1,4 +1,4 @@
-export const CURRICULMS = [
+export const CURRICULMS: { chapter: number; title: string }[] = [
   {
     chapter: 1,
     title: "Props & State",
@@ -29,7 +29,7 @@ export const CURRICULMS = [
   },
   {
     chapter: 8,
-    title: "Next.js API routes",
+    title: "Hydration",
   },
 ];
 

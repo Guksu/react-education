@@ -1,4 +1,5 @@
 import { CURRICULMS } from "@/constants";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 // React는 가상 DOM을 사용하여 UI 업데이트를 실행
@@ -21,6 +22,12 @@ export default function Home() {
         alignItems: "center",
       }}
     >
+      {/* <Link /> 컴포넌트의 prefetch를 사용하여 해당 페이지의 js를 먼저 로드할 수 있다.*/}
+      {/* production환경에서만 적용되며, CSR은 해당되지 않는다.*/}
+      {/* 단, 정적데이터만 가져오므로 getServerSideProps의 데이터는 가져오지 못한다. */}
+      <Link href={"/chapter7"} prefetch={true}>
+        Chapter7
+      </Link>
       {CURRICULMS.map((curriculum) => {
         return (
           <li

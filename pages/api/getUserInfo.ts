@@ -11,11 +11,13 @@ export default async function handler(
     return res.status(400).json({ message: "Incorrect UserIdx" });
   }
 
-  const data = USER_DATA.find((user) => user.idx === Number(userIdx));
+  setTimeout(() => {
+    const data = USER_DATA.find((user) => user.idx === Number(userIdx));
 
-  if (data === undefined) {
-    return res.status(400).json({ message: "No User" });
-  }
+    if (data === undefined) {
+      return res.status(400).json({ message: "No User" });
+    }
 
-  return res.status(200).json({ data });
+    return res.status(200).json({ data });
+  }, 3000);
 }
