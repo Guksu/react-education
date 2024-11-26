@@ -1,74 +1,18 @@
-import { GetServerSideProps } from "next";
-import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-// 13버전부터 app router와 pages router로 분리
-// 현재 프로젝트들은 pages router로 구성
-// SSR : 그때그때 생성
-// SSG : 빌드 시 딱 한 번 생성
-
-interface UserData {
-  idx: number;
-  name: string;
-  age: number;
-}
-
-interface Props {
-  ssrUserData: UserData;
-}
-
-export default function Chapter7({ ssrUserData }: Props) {
-  const [csrUserData, setCsrUserData] = useState<UserData>();
-
-  const getUserData = async () => {
-    const GET_USER = "/api/getUserInfo";
-    const USER_IDX = 1;
-
-    try {
-      const response = await fetch(`${GET_USER}?userIdx=${USER_IDX}`).then(
-        (res) => res.json()
-      );
-      setCsrUserData(response.data);
-    } catch (error: unknown) {
-      throw new Error(`API호출 에러 :${error}`);
-    }
-  };
-
-  useEffect(() => {
-    getUserData();
-  }, []);
+export default function Chapter7Router() {
+  const router = useRouter();
 
   return (
-    <div>
-      <div>
-        <h3>SSR</h3>
-        <div>idx : {ssrUserData.idx}</div>
-        <div>name : {ssrUserData.name}</div>
-        <div>age : {ssrUserData.age}</div>
-      </div>
-
-      {csrUserData && (
-        <div>
-          <h3>CSR</h3>
-          <div>idx : {csrUserData.idx}</div>
-          <div>name : {csrUserData.name}</div>
-          <div>age : {csrUserData.age}</div>
-        </div>
-      )}
-    </div>
+    <ul>
+      <li onClick={() => router.push("/chapter7/0")}>First User Info</li>
+      {/* <Link /> 컴포넌트의 prefetch를 사용하여 해당 페이지의 js를 먼저 로드할 수 있다.*/}
+      {/* production환경에서만 적용되며, CSR은 해당되지 않는다.*/}
+      {/* 단, 정적데이터만 가져오므로 getServerSideProps의 데이터는 가져오지 못한다. */}
+      {/* null / true / false 차이 :  https://nextjs-ko.org/docs/app/api-reference/components/link#prefetch*/}
+      <Link href={"/chapter7/1"}>Second User Info</Link>
+      <Link href={"/chapter8"}>Chapter 8</Link>
+    </ul>
   );
 }
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  const GET_USER = "http://127.0.0.1:3000/api/getUserInfo";
-  const USER_IDX = 1;
-
-  const response = await fetch(`${GET_USER}?userIdx=${USER_IDX}`).then((res) =>
-    res.json()
-  );
-
-  return {
-    props: {
-      ssrUserData: response.data ?? null,
-    },
-  };
-};
