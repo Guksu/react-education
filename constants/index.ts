@@ -31,6 +31,10 @@ export const CURRICULMS: { chapter: number; title: string }[] = [
     chapter: 8,
     title: "Hydration",
   },
+  {
+    chapter: 9,
+    title: "Middleware",
+  },
 ];
 
 export const USER_DATA = [
