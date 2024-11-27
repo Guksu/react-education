@@ -8,8 +8,15 @@ export function middleware(request: NextRequest) {
   console.log("----------------------");
   console.log(userAgent(request));
   console.log("----------------------");
+
   // 요청받은 url 경로가 아닌, "/경로로 이동시키는 로직"
   return NextResponse.redirect(new URL("/", request.url));
+
+  // if (request.nextUrl.pathname === "/chapter9") {
+  //   return NextResponse.redirect(new URL("/", request.url));
+  // } else {
+  //   return NextResponse.next();
+  // }
 }
 
 // matcher에 해당하는 경우에만 미들웨어를 적용시킨다.
