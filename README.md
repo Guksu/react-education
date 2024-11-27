@@ -12,3 +12,5 @@
 6. tanstack/react-query
 7. Next.js
 8. Hydration
+9. Middleware
+10. Internationalization

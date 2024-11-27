@@ -4,11 +4,11 @@
 import { NextRequest, NextResponse, userAgent } from "next/server";
 
 export function middleware(request: NextRequest) {
-  // 요청받은 url 경로가 아닌, "/경로로 이동시키는 로직"
   console.log("미들웨어 작동!");
   console.log("----------------------");
   console.log(userAgent(request));
   console.log("----------------------");
+  // 요청받은 url 경로가 아닌, "/경로로 이동시키는 로직"
   return NextResponse.redirect(new URL("/", request.url));
 }
 
