@@ -14,3 +14,4 @@
 8. Hydration
 9. Middleware
 10. Internationalization
+11. Debug
